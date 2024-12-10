@@ -18,7 +18,6 @@
 
 import io
 
-import google
 from PIL import Image
 import six
 from six.moves import range

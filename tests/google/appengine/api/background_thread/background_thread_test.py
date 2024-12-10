@@ -23,7 +23,6 @@
 import contextlib
 import random
 import threading
-import google
 import mock
 import mox
 import requests

@@ -25,8 +25,6 @@ import pickle
 import re
 import sys
 
-import google
-
 from absl import app
 import mox
 import six

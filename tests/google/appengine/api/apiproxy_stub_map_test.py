@@ -22,8 +22,6 @@ from concurrent import futures
 import threading
 import traceback
 
-import google
-
 from absl import app
 from six.moves import range
 

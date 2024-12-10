@@ -14,13 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-"""A dummy version of `apiproxy.py` with a functional `SetRequestEndCallback()`.
-
-This file exists to be backward compatible with GAE Standard Python27.
-"""
-
-from google.appengine.runtime import callback as vmcallback
+"""Constants related to the App Engine Python runtime."""
 
 
-def SetRequestEndCallback(callback):
-  vmcallback.SetRequestEndCallback(callback)
+TESTBED_REQUEST_ID_HASH = 'testbed-request-id-hash'

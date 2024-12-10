@@ -20,8 +20,6 @@
 
 
 
-import google
-
 from google.appengine.api import module_testutil
 from google.appengine.api import namespace_manager
 from google.appengine.runtime.context import ctx_test_util

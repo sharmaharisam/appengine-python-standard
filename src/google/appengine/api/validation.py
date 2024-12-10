@@ -41,7 +41,8 @@ builder. See the `yaml_object` module.
 
 
 import re
-import google
+import sys
+
 from ruamel import yaml
 import six
 
@@ -883,7 +884,7 @@ class Exec(Type):
       return value
     else:
 
-      return 'exec ' + value
+      return value if hasattr(sys, 'getwindowsversion') else 'exec ' + value
 
 
 class Options(Validator):

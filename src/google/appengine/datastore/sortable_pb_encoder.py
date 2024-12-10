@@ -40,11 +40,12 @@ Warning:
 
 import array
 import struct
+
 import six
 
 from google.protobuf import descriptor
 from google.protobuf import message
-from google.protobuf import symbol_database
+from google.protobuf import message_factory
 
 _MAX_UNSIGNED_BYTE = 255
 
@@ -546,7 +547,7 @@ class Decoder(object):
 
 
 def _GetPrototype(field_descriptor):
-  return symbol_database.Default().GetPrototype(field_descriptor.message_type)
+  return message_factory.GetMessageClass(field_descriptor.message_type)
 
 
 def IsFloatNegative(value, encoded):

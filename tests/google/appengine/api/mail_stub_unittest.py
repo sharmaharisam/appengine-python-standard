@@ -29,7 +29,6 @@ import smtplib
 import subprocess
 import sys
 import tempfile
-import google
 import mox
 import six
 from six.moves import map

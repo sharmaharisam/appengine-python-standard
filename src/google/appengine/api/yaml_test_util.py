@@ -24,7 +24,6 @@
 from google.appengine.api import yaml_listener
 from google.appengine.api import yaml_builder
 
-import google
 from ruamel import yaml
 
 

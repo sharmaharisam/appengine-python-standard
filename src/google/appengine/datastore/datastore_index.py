@@ -65,8 +65,6 @@ https://cloud.google.com/appengine/docs/standard/python3/configuring-datastore-i
 import copy
 import itertools
 
-import google
-
 from ruamel import yaml
 import six
 from six.moves import zip

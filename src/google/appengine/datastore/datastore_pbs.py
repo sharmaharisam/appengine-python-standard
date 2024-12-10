@@ -51,7 +51,6 @@ _CLOUD_DATASTORE_ENABLED = False
 
 try:
   
-  
   import googledatastore
 
   if googledatastore.VERSION >= _MIN_CLOUD_DATASTORE_VERSION:

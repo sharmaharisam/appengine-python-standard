@@ -18,8 +18,6 @@
 
 """Unit-test for google.appengine.api.yaml_listener module"""
 
-import google
-
 from ruamel import yaml
 from six.moves import zip
 

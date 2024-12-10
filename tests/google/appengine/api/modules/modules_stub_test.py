@@ -17,7 +17,6 @@
 """Tests for google.appengine.api.modules.modules_stub."""
 import logging
 
-import google
 import mox
 
 from absl.testing import absltest

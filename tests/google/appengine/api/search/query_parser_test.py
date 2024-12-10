@@ -20,8 +20,6 @@
 
 
 
-import google
-
 from absl import app
 from absl import flags
 from google.appengine.api.search import query_parser

@@ -24,8 +24,6 @@ import functools
 import os
 import time
 
-import google
-
 
 from google.appengine.tools import os_compat
 
