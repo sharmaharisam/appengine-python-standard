@@ -325,6 +325,8 @@ import asyncio
 
 from google.appengine.ext.ndb import key as key_module
 from google.appengine.ext.ndb import utils
+from google.appengine.ext.ndb import context
+
 import six
 from six.moves import map
 import six.moves.cPickle as pickle
