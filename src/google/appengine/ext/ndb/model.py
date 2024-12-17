@@ -3572,17 +3572,15 @@ class Model(six.with_metaclass(MetaModel, _NotEqualMixin)):
 
   async def put_asyncio(self):
       """
-      Asyncio-compatible version of put_async without deadlock.
-      Avoids deadlocks by properly awaiting NDB operations.
+      Asyncio-compatible version of put using ndb.put_async() and asyncio.
       """
       loop = asyncio.get_running_loop()
 
-      # Use the NDB async API directly without using get_result()
-      ndb_future = self.put_async()
-
-      # Await the NDB future directly using asyncio.wait_for to avoid deadlock
-      result = await asyncio.wait_for(ndb_future, timeout=None)
-      return result
+      # Run ndb.put_async() in a non-blocking manner using run_in_executor
+      ndb_future = await loop.run_in_executor(None, lambda: self.put_async())
+      
+      # Return the result of the put_async() Future
+      return await ndb_future
 
   @classmethod
   def _get_or_insert(*args, **kwds):
